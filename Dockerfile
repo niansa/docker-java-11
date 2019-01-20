@@ -3,11 +3,11 @@
 # Environment: Java
 # Minimum Panel Version: 0.6.0
 # ----------------------------------
-FROM openjdk:9-jdk-alpine
+FROM ubuntu:18.04
 
 MAINTAINER Pterodactyl Software, <support@pterodactyl.io>
 
-RUN apk add --no-cache --update curl ca-certificates openssl git tar bash sqlite fontconfig \
+RUN apt install openjdk-11-jre curl ca-certificates openssl git tar bash sqlite fontconfig \
     && adduser -D -h /home/container container
 
 USER container
