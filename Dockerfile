@@ -7,7 +7,7 @@ FROM ubuntu:18.04
 
 MAINTAINER Pterodactyl Software, <support@pterodactyl.io>
 
-RUN apt update && apt install openjdk-11-jre curl ca-certificates openssl git tar bash sqlite fontconfig \
+RUN apt update && apt -y install openjdk-11-jre curl ca-certificates openssl git tar bash sqlite fontconfig \
     && adduser -D -h /home/container container
 
 USER container
